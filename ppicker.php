@@ -25,9 +25,9 @@ function ppicker(){
             foreach ($cat_ids as $cid) {
                 $product_cats = array('taxonomy' => 'product_cat', 'field' => 'term_id', 'terms' => $cid);
                 $term = get_term_by('id', $cid, 'product_cat');
-                $fuck=$_POST[$term->name];
-                if (is_array($fuck) || is_object($fuck)) {
-                    foreach ($fuck as $fu) {
+                $pc=$_POST[$term->name];
+                if (is_array($pc) || is_object($pc)) {
+                    foreach ($pc as $fu) {
                         ?>
                         <tr>
                             <?php
